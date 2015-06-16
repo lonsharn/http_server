@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)http://h5.mangofun.cn/20141217cgm/index.html?from=timeline&isappinstalled=0 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+		<title>我是歌手，猜歌名！</title>
+		<link rel="stylesheet" type="text/css" href="./我是歌手，猜歌名！_files/index.css">
+	</head>	
+	<body>
+		<div class="wrap">
+			<div class="body">
+				<div id="loading" style="display: none;">
+					<div><img src="./我是歌手，猜歌名！_files/loading.gif"></div>
+				</div>
+				<div class="start" id="startcontain" style="display: none;">
+					<div id="start">
+						<img class="startbg startbtn" src="./我是歌手，猜歌名！_files/btn-bg.png">
+						<img class="startword startbtn" src="./我是歌手，猜歌名！_files/start.png">
+					</div>
+					<img class="rule" src="./我是歌手，猜歌名！_files/rule-tips.png">
+				</div>
+				<div id="time" class="time">
+					<img class="timeword" src="./我是歌手，猜歌名！_files/time.png">
+					<img class="timenum" src="./我是歌手，猜歌名！_files/0-4.png"><img class="timenum" src="./我是歌手，猜歌名！_files/0-5.png">
+				</div>
+				<div class="addtime" id="addtime">
+					<img class="addicon" src="./我是歌手，猜歌名！_files/add.png"><img class="addnum" src="./我是歌手，猜歌名！_files/0-5.png">
+				</div>
+				<div id="score" class="score">
+					<img class="scoreword" src="./我是歌手，猜歌名！_files/score.png">
+					
+				<img class="scorenum" src="./我是歌手，猜歌名！_files/0-0.png"><img class="scorenum" src="./我是歌手，猜歌名！_files/0-0.png"></div>
+				<img class="logo" src="./我是歌手，猜歌名！_files/logo.png">
+				
+				<div id="wrong" class="wrong">
+					<img class="wrongword" src="./我是歌手，猜歌名！_files/wrong.png">
+				</div>
+				
+				<div class="music-img" id="music-img">
+					<img class="cube-border" src="./我是歌手，猜歌名！_files/bg-3.png">
+					<div class="cube-contain">
+						<div class="cube" id="cube">
+							<img class="cube-face" id="cube-face" src="./我是歌手，猜歌名！_files/02.jpg">
+							<img class="cube-back" id="cube-back" src="./我是歌手，猜歌名！_files/22.jpg">
+							<img class="cube-left" id="cube-left" src="./我是歌手，猜歌名！_files/07.jpg">
+							<img class="cube-right" id="cube-right" src="./我是歌手，猜歌名！_files/21.jpg">
+						</div>
+						<img class="cube-cover" id="cube-cover" src="./我是歌手，猜歌名！_files/02.jpg">
+					</div>
+				</div>
+				<div class="target-contain" id="target">
+					<dl class="target"><dt><strong>歌</strong></dt><dt><strong>歌</strong></dt></dl>
+				</div>
+				
+				<div class="choose-contain" id="choose">
+					<dl class="choose">
+						<dt><span style="opacity: 1;">早</span></dt>
+						<dt><span style="opacity: 1;">强</span></dt>
+						<dt><span style="opacity: 1;">来</span></dt>
+						<dt><span style="opacity: 1;">我</span></dt>
+						<dt><span style="opacity: 1;">方</span></dt>
+					</dl>
+					<dl class="choose">
+						<dt><span style="opacity: 1;">他</span></dt>
+						<dt><span style="opacity: 1;">纵</span></dt>
+						<dt><span style="opacity: 1;">不</span></dt>
+						<dt><span style="opacity: 1;">害</span></dt>
+						<dt><span style="opacity: 1;">目</span></dt>
+					</dl>
+					<dl class="choose">
+						<dt><span style="opacity: 1;">拉</span></dt>
+						<dt><span style="opacity: 1;">宁</span></dt>
+						<dt><span style="opacity: 1;">酒</span></dt>
+						<dt><span style="opacity: 1;">静</span></dt>
+						<dt><span style="opacity: 1;">趁</span></dt>
+					</dl>
+					
+				</div>
+				<button class="bgm-btn" id="bgm-btn"></button>
+				<button class="up-btn" id="up-btn"></button>
+				<button class="down-btn" id="down-btn"></button>
+				<button class="end-btn" id="end-btn"></button>
+				<button class="bingo-btn" id="bingo-btn"></button>
+				<div class="shuping" style="display: none;"><span>亲,请竖屏玩耍！</span></div>
+			</div>  
+			<div class="over" id="over">
+				<div class="dialogue">
+					<div class="getcontain">
+						<img class="getnum" src="./我是歌手，猜歌名！_files/1-4.png"><img class="getnum" src="./我是歌手，猜歌名！_files/1-1.png"><img class="getnum" src="./我是歌手，猜歌名！_files/1-5.png"><img class="getnum" src="./我是歌手，猜歌名！_files/1-0.png">
+						<img class="getword" src="./我是歌手，猜歌名！_files/fen.png">
+					</div>
+					<img id="dialogue" class="getword5" src="./我是歌手，猜歌名！_files/w-2.png">
+				</div>
+				<div class="playagain" id="palyagain"><img class="btn-bg" src="./我是歌手，猜歌名！_files/btn-bg.png"> <img class="playagainword" src="./我是歌手，猜歌名！_files/again.png"></div>
+				<div class="share" id="share"><img class="btn-bg" src="./我是歌手，猜歌名！_files/btn-bg.png"> <img class="shareword" src="./我是歌手，猜歌名！_files/vs.png"></div>
+				<div class="attention"><a href="http://mp.weixin.qq.com/s?__biz=MzA3ODE3NTgyNw==&mid=202837849&idx=1&sn=cf954e233b94b28941012b93a0c8e632#rd">
+					<img class="btn-bg" src="./我是歌手，猜歌名！_files/btn-bg.png"> <img class="answer" src="./我是歌手，猜歌名！_files/answer.png"></a></div>
+				<div class="share-tip" id="tip"><img class="sharetipword" src="./我是歌手，猜歌名！_files/2000.png"></div>
+				<p class="more">《我是歌手》官方手游即将上线，敬请期待！</p>
+				<div class="full" id="full"><span class="fullword" id="fullword">你通关啦！猜歌大王就是你！</span></div>
+			</div>
+			<audio id="up" loop="" src="audio/up.mp3" type="audio/mpeg"></audio>
+		<audio id="bgm" loop="" src="audio/bgm.mp3" type="audio/mpeg" autoplay=""></audio><audio id="down" loop="" src="audio/down.mp3" type="audio/mpeg"></audio><audio id="bingo" src="audio/bingo.mp3" type="audio/mpeg"></audio><audio id="end" src="audio/end.mp3" type="audio/mpeg"></audio></div>
+
+<script src="./我是歌手，猜歌名！_files/jquery.min.js" type="text/javascript" charset="utf-8"></script>	
+<script src="./我是歌手，猜歌名！_files/weixinapi.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+"use strict";
+
+	var iScore = 0;
+	var clickOrtouch;
+	if ($(".wrap").width()>568) {
+		$(".shuping").css("display","none");
+	}
+	var isIPhone = /iPhone/i.test(navigator.userAgent),
+		isIPad = /iPad/i.test(navigator.userAgent),
+		isAndroid = /android/i.test(navigator.userAgent);
+	var isIOS = isIPhone  || isIPad;
+
+	if (isAndroid || isIOS) {
+		clickOrtouch = "touchstart";
+	}
+	else {
+		clickOrtouch = "click";
+	}
+	
+window.onload = function (){
+	$('#loading').css('display','none');
+	
+}	
+	
+$(document).ready(function () {
+	setTimeout(function(){
+		$('#loading').css('display','none');
+	},10000);
+
+	//bgm
+	$("<audio id='bgm' loop  src='' type='audio/mpeg'></audio>").appendTo($('.wrap'));    
+	 $('#bgm').attr('src','audio/bgm.mp3');   
+	 $('#bgm').get(0).addEventListener('loadedmetadata',function () {
+		$('#bgm').get(0).autoplay = true;
+		$('#bgm').get(0).loop = true;
+		$('#bgm').get(0).currentTime = 0;
+		$('#bgm').get(0).play();
+		playBgm ();
+	 },false);
+	 $('#bgm').get(0).addEventListener('ended',function () {
+		$('#bgm').get(0).currentTime = 0;
+		playBgm ();
+	 },false);
+	 $("#bgm-btn").get(0).addEventListener(clickOrtouch,playBgm,false);
+	 function playBgm () {
+		$('#bgm').get(0).play();
+		$('#up').get(0).pause();
+		$("#down").get(0).pause();
+	 }
+	//up
+	$("#up").get(0).addEventListener("loadedmetadata",function(){
+		$('#up').get(0).autoplay = false;
+		$('#up').get(0).loop = false;
+		$('#up').get(0).currentTime = 0;
+	},false);
+	$("#up").get(0).addEventListener("ended",function(){
+		$('#up').get(0).currentTime = 0;
+		$('#up').get(0).pause();
+		playBgm ();
+	},false);
+	$("#up-btn").get(0).addEventListener(clickOrtouch,playUp,false);
+	 function playUp () {
+		$('#up').get(0).play();
+	 }
+	//down
+	$("<audio id='down' loop  src='' type='audio/mpeg'></audio>").appendTo($('.wrap'));    
+	 $('#down').attr('src','audio/down.mp3'); 
+	$("#down").get(0).addEventListener("loadedmetadata",function(){
+		$('#down').get(0).autoplay = false;
+		$('#down').get(0).loop = true;
+		$('#down').get(0).currentTime = 0;
+	},false);
+	$('#down').get(0).addEventListener('ended',function () {
+		$('#down').get(0).currentTime = 0;
+		playDown ();
+	 },false);
+	$("#down-btn").get(0).addEventListener(clickOrtouch,playDown,false);
+	 function playDown () {
+		$('#down').get(0).play();
+	 }
+	//bingo
+	$("<audio id='bingo' loop  src='' type='audio/mpeg'></audio>").appendTo($('.wrap'));    
+	 $('#bingo').attr('src','audio/bingo.mp3');
+	$("#bingo").get(0).addEventListener("loadedmetadata",function(){
+		$('#bingo').get(0).autoplay = false;
+		$('#bingo').get(0).loop = false;
+		$('#bingo').get(0).currentTime = 0;
+	},false);
+	$('#bingo').get(0).addEventListener('ended',function () {
+		$('#bingo').get(0).currentTime = 0;
+	 },false);
+	$("#bingo-btn").get(0).addEventListener(clickOrtouch,playBingo,false);
+	 function playBingo () {
+		$('#bingo').get(0).play();
+	 }
+	//end
+	$("<audio id='end' loop  src='' type='audio/mpeg'></audio>").appendTo($('.wrap'));    
+	 $('#end').attr('src','audio/end.mp3');
+	$("#end").get(0).addEventListener("loadedmetadata",function(){
+		$('#end').get(0).autoplay = false;
+		$('#end').get(0).loop = false;
+		$('#end').get(0).currentTime = 0;
+	},false);
+	$('#end').get(0).addEventListener('ended',function () {
+		$('#end').get(0).currentTime = 0;
+		playBgm();
+	 },false);
+	$("#end-btn").get(0).addEventListener(clickOrtouch,playEnd,false);
+	 function playEnd () {
+		$('#end').get(0).play();
+	 }	
+	
+	
+	
+	var aSongName = ["北京北京","等待","断了线","烦","光之翼","寂寞先生","矜持",
+		"哭了","老男孩","冷酷到底","领悟","龙的传人","闷","日不落","嫂子颂",
+		"死了都要爱","王妃","舞娘","夜夜夜夜","张三的歌","走四方","最长的电影"];
+		
+	var aSongImg = ["img/01.jpg","img/03.jpg","img/04.jpg","img/05.jpg","img/06.jpg","img/08.jpg","img/10.jpg",
+		"img/12.jpg","img/13.jpg","img/14.jpg","img/15.jpg","img/16.jpg","img/18.jpg","img/20.jpg",
+		"img/21.jpg","img/23.jpg","img/24.jpg","img/27.jpg","img/30.jpg",
+		"img/31.jpg","img/32.jpg","img/33.jpg"];
+		
+	var aSongName2 = ["趁早","黑色柳丁","剪爱","空白格","龙卷风","泡沫","十年","吻别","烟花易冷","洋葱"];	
+	
+	var aSongImg2 = ["img/02.jpg","img/07.jpg","img/09.jpg","img/11.jpg","img/17.jpg","img/19.jpg","img/22.jpg","img/25.jpg","img/28.jpg","img/29.jpg"];
+	
+	var aHanZi = ["宁","静","雪","战","林","界","方","强","全","东",
+		"倔","害","目","酒","剑","纵","美","模","建","大",
+		"流","北","普","施","渐","你","的","爱","我","来",
+		"他","还","不","走","破","婆","完","时","哪","拉"];
+		
+	var oSong = {};
+	var showFlag = true;
+	var initGame;
+	(initGame = function () {
+		oSong = {
+			aName:[],
+			aLib:[],
+			aImg:[],
+			aLibNum:[],
+			aNameNum:[],
+			aAwardScore:[0,0,0,100,0,200,0,300,0,0,500,0,0,0,0,1000,0,0,0,0,2000],
+			iPass:0,
+			next:0,
+			back:0,
+			last:0,
+			index:0,
+			iTime:90,
+			iScore:0,
+			iContinuePass:0,
+			iLength:20,
+			iNum:0,
+			timer:null,
+			timeFlag:true
+		}
+		//生成歌曲随机库
+		oSong.aLibNum.push(RandomNum(aSongName2.length));
+		oSong.aLib.push(aSongName2[oSong.aLibNum[0]]);
+		oSong.aImg.push(aSongImg2[oSong.aLibNum[0]]);
+		NoReapte(oSong.aLibNum,5,aSongName2.length);
+		
+		while(oSong.aLibNum.length && oSong.aLibNum.length<15){
+			if(oSong.aLibNum.length == 5){
+				oSong.aLibNum = [];
+				oSong.aLibNum.push(RandomNum(aSongName.length));
+				oSong.aLib.push(aSongName[oSong.aLibNum[0]]);
+				oSong.aImg.push(aSongImg[oSong.aLibNum[0]]);
+				NoReapte(oSong.aLibNum,15,aSongName.length);
+			}
+		}
+		$(".scorenum").remove();
+		$("#score").append("<img class='scorenum' src='img/0-0.png' /><img class='scorenum' src='img/0-0.png' />");
+
+		$(".timenum").eq(0).attr("src","img/0-9.png");
+		$(".timenum").eq(1).attr("src","img/0-0.png");
+		console.log(oSong.aLib)
+		initPass();
+		
+		$("#cube-cover").attr("src",oSong.aImg[oSong.index]);
+		$("#cube-face").attr("src",oSong.aImg[oSong.index]);
+		$("#cube-left").attr("src",oSong.aImg[oSong.index+1]);
+		$("#cube-back").attr("src",oSong.aImg[oSong.index+2]);
+		$("#cube-right").attr("src",oSong.aImg[oSong.iLength-1]);
+
+	})();
+	function initPass () {
+		oSong.aName = [];
+		oSong.aNameNum = [];
+		oSong.aLibNum = [];
+		oSong.aName = String.prototype.split.call(oSong.aLib[oSong.iPass],'');
+		console.log(oSong.aName)
+		//填充文字选择区内容
+		oSong.aLibNum.push(RandomNum($("#choose span").length));
+		NoReapte(oSong.aLibNum,$("#choose span").length,aHanZi.length);
+		for (var i = $("#choose span").length-1;i>=0;i--) {
+			$("#choose span").eq(i).html(aHanZi[oSong.aLibNum[i]]);
+		}
+		oSong.aNameNum.push(RandomNum($("#choose span").length));
+		NoReapte(oSong.aNameNum,oSong.aName.length,$("#choose span").length);
+		$(".target").eq(0).html("");
+		for (var i=oSong.aName.length-1;i>=0;i--) {
+			$(".target").eq(0).append("<dt><strong>歌</strong></dt>");
+			$("#choose span").eq(oSong.aNameNum[i]).html(oSong.aName[i]);
+		}
+		//换图
+		if (oSong.iPass) {
+			oSong.last = oSong.index;
+			oSong.index = oSong.index === oSong.iLength ? 1:oSong.index+1;
+			oSong.next = oSong.index === oSong.iLength ? 1:oSong.index+1;
+			oSong.back = oSong.next === oSong.iLength ? 1:oSong.next+1;
+			$("#cube-cover").css("opacity",0).attr("src",oSong.aImg[oSong.index]);
+			$("#cube").addClass("rotate-left");
+			setTimeout(function(){
+				$("#cube-cover").css("opacity",1);
+			},800);
+			$("#cube").get(0).addEventListener("webkitAnimationEnd",function () {
+				$("#cube-cover").css("opacity",1);
+				$(this).removeClass("rotate-left");
+				$("#cube-face").attr("src",oSong.aImg[oSong.index]);
+				$("#cube-left").attr("src",oSong.aImg[oSong.next]);
+				$("#cube-back").attr("src",oSong.aImg[oSong.back]);
+				$("#cube-right").attr("src",oSong.aImg[oSong.last]);
+			},false);
+		}
+		
+	}
+	
+	$("#start").bind(clickOrtouch,function () {
+		
+		$("#startcontain").css("display","none");
+		document.getElementById("startcontain").style.display = "none";
+		oSong.timeFlag = false;
+		$("#choose span").css("opacity",1);
+		countDownTime ();
+		//切换开始过度音乐
+		$('#bgm').get(0).play();
+		playUp ();
+		setTimeout(function(){
+			playBgm();
+		},1000);
+//		alert($("#startcontain").css("display"));
+	});
+	
+	$("#choose span").bind(clickOrtouch,function () {
+//		if (showFlag ) {
+//			return false;
+//		}
+//		else{
+			var str = $(this).html();
+			if (str == oSong.aName[oSong.iNum]) {
+				
+				$("#target strong").eq(oSong.iNum).html(str).css("opacity","1");
+				$(this).css("opacity","0").html("凌");
+				oSong.iNum++;
+				if (oSong.iNum == oSong.aName.length) {
+					$("#bingo").get(0).play();
+					playBingo ();
+					//下一关
+					oSong.iPass++;
+					oSong.iContinuePass++;
+					//得分
+					oSong.iScore+=50+oSong.aAwardScore[oSong.iContinuePass];
+					oSong.iTime+=5;
+					if (oSong.iTime>99 && $(".timenum").length<3) {
+						$("<img class='timenum' src=''/>").appendTo($("#time"));
+					}
+					if (oSong.iScore>99 && $(".scorenum").length<3) {
+						$("<img class='scorenum' src=''/>").appendTo($("#score"));
+					}
+					if (oSong.iScore>999 && $(".scorenum").length<4) {
+						$("<img class='scorenum' src=''/>").appendTo($("#score"));
+					}
+					var aScore = String.prototype.split.call(oSong.iScore,'');
+					
+					for (var i = aScore.length-1;i>=0;i--) {
+						$('.scorenum').eq(i).attr('src',"img/0-"+aScore[i]+".png");
+					}
+					
+					$("#addtime").addClass("addtimeanimate");
+					$(".scorenum").addClass("addeffect");
+					setTimeout(function () {
+						$(".scorenum").removeClass("addeffect");
+						$("#addtime").removeClass("addtimeanimate");
+					},1000);
+					//进度
+//					$("#progress").html(oSong.iPass+1);
+					oSong.iNum = 0;
+					setTimeout(function () {
+						nextPass();
+					},700);
+				}
+				if (oSong.iPass == oSong.iLength) {
+					oSong.iTime=1;
+					countDownTime ();
+				}
+			}
+			else {
+				oSong.iContinuePass=0;
+				$("#wrong").stop().animate({opacity:1},"fast",function () {
+					$(this).delay(1000).animate({opacity:0},"fast");
+				});
+			}
+//		}
+			
+	});
+	
+	function nextPass () {
+		$("#target strong").css("opacity","0");
+
+		$("#choose span").css("opacity","0");
+		initPass();
+		$("#choose span").css("opacity","1");
+	}
+	
+	function gameover () {
+		$("#over").css({"opacity":0,"display":"block"});
+		var aScore = String.prototype.split.call(oSong.iScore,'');
+		console.log(oSong.iScore+":"+aScore)
+		$(".getnum").attr("src","");
+		if (oSong.iScore<251) {
+			$("#dialogue").removeClass().addClass("getword4").attr("src","img/w-1.png");
+			for (var i = aScore.length-1;i>=0;i--) {
+				$('.getnum').eq(i).attr('src',"img/1-"+aScore[i]+".png");
+			}
+		}
+		else if(oSong.iScore<1001){
+			$("#dialogue").removeClass().addClass("getword5").attr("src","img/w-2.png");
+			for (var i = aScore.length-1;i>=0;i--) {
+				$('.getnum').eq(i).attr('src',"img/1-"+aScore[i]+".png");
+			}
+		}
+		else {
+			$("#dialogue").removeClass().addClass("getword6").attr("src","img/w-3.png");
+			for (var i = aScore.length-1;i>=0;i--) {
+				$('.getnum').eq(i).attr('src',"img/1-"+aScore[i]+".png");
+			}
+		}
+		$("#over").css("opacity",1);
+		$("#palyagain").bind(clickOrtouch,function () {
+			$("#over").css("display","none");
+			initGame();
+//			oSong.restartFlag = false;
+			$("#choose span").css("opacity",1);
+			countDownTime ();
+			$("#target strong").css("opacity",0);
+		});
+		$("#share").bind(clickOrtouch,function () {
+			$("#tip").css("display","block");
+			setTimeout(function () {
+				$("#tip").css("display","none");
+			},2500);
+			$("#tip").bind(clickOrtouch,function () {
+				$(this).css("display","none");
+			});
+		});
+	}
+	
+	
+	
+	function countDownTime () {
+		oSong.iTime--;
+//		oSong.iTime<10?$("#time").html('0'+oSong.iTime):$("#time").html(oSong.iTime);
+		if (oSong.iTime < 10){
+			$(".timenum").eq(0).attr('src',"img/0-0.png");
+			$(".timenum").eq(1).attr('src',"img/0-"+oSong.iTime+".png");
+		}
+		else {
+			$(".timenum").eq(0).attr('src',"img/0-"+parseInt(oSong.iTime/10)+".png");
+			$(".timenum").eq(1).attr('src',"img/0-"+parseInt(oSong.iTime%10)+".png");
+		}
+
+		if(oSong.iTime <= 0) {
+			clearTimeout(oSong.timer);
+			$("#choose span").css("opacity",0);
+			$("#target strong").css("opacity","0");
+//			oSong.restartFlag = true;
+			//
+			if (oSong.iPass == oSong.iLength) {
+				$("#fullword").html("你通关啦！获得"+oSong.iScore+"分，猜歌大王就是你！")
+				$("#full").css("display","block");
+				setTimeout(function(){
+					$("#full").css("display","none");
+				},3000);
+//				$("#full").get(0).addEventListener("touchstart",function(){
+//					$("#full").css("display","none");
+//				},false);
+			}
+			gameover();
+		}
+		else{
+			clearTimeout(oSong.timer);
+			oSong.timer = setTimeout(function () {
+				countDownTime ();
+			},1000);
+		}
+		
+		if (oSong.iTime<30) {
+			$("#bgm").get(0).pause();
+			$("#bgm").get(0).currentTime = 0;
+			playDown();
+		}else{
+			$("#down").get(0).currentTime = 0;
+			playBgm();
+		}
+		if (oSong.iTime == 1) {
+			$("#down").get(0).currentTime = 0;
+			$("#down").get(0).pause();
+			playEnd();
+			setTimeout(function(){
+				playBgm();
+			},1000);
+		}
+	}
+	
+	function RandomNum(num) {
+		return parseInt(Math.random()*num);
+	}
+	function NoReapte(arr,length,num) {
+		while(arr.length<length){
+			var iRand=RandomNum(num);
+			for (var i = 0; i < arr.length; i++) {
+				if (arr[i]==iRand){
+					break;
+				}
+			};
+			if (i==arr.length){
+				arr.push(iRand);
+				if (oSong.timeFlag) {
+					if (length == 15) {
+						oSong.aLib.push(aSongName[iRand]);
+						oSong.aImg.push(aSongImg[iRand]);
+					}
+					else if(length == 5) {
+						oSong.aLib.push(aSongName2[iRand]);
+						oSong.aImg.push(aSongImg2[iRand]);
+					}
+				}
+					
+			}
+		};
+	}
+	    
+
+WeixinApi.ready(function(Api) {
+	
+	var oDate = new Date(),
+		iYear = 2014,
+		iMonth = 11,
+		iDay = 22,
+		num;
+	
+//	console.log(oDate.getFullYear()+":"+oDate.getMonth()+":"+oDate.getDay());
+	
+    var wxData = {
+        "imgUrl" : 'http://h5.mangofun.cn/20141217cgm/img/logo.png',
+        "link" : 'http://h5.mangofun.cn/20141217cgm/index.html',
+        "desc" : '我是歌手，猜歌名!快来玩吧！',
+        "title" : "我是歌手！我是猜歌王！"
+    };
+
+    // 分享的回调
+    var wxCallbacks = {
+        favorite : false,
+        ready : function() {
+            if (oSong.iScore) {
+            	iYear = oDate.getFullYear()-2014;
+            	iMonth = oDate.getMonth()-11;
+            	if (iYear) {
+            		iDay = ((iYear-1)*12+oDate.getMonth()+1)*30+8;
+            	}
+            	else if(iMonth){
+            		iDay = (iMonth-1)*30+oDate.getDate()+8;
+            	}
+            	else{
+            		iDay = oDate.getDate()-22;
+            	}
+            	num = Math.round((3672+iDay*223+oDate.getHours()*15+oDate.getMinutes()*0.5)*(oSong.iPass/oSong.iLength)); 
+            	
+            	wxData.desc = "我是歌手！看图猜歌，我猜对了"+oSong.iPass+"首歌！击败了"+num+"个选手！你来试试？";
+            }else{
+            	wxData.desc = "看图猜歌曲！考验你的智商的时候到了！";
+            }
+        }
+    };
+	var wxCallbacks2 = {
+		ready: function() {
+			wxData.desc = "看图猜歌！我猜中了"+oSong.iPass+"道题！你来试试？";
+		}
+	};
+    Api.shareToFriend(wxData, wxCallbacks2);
+    Api.shareToTimeline(wxData, wxCallbacks);
+    Api.shareToWeibo(wxData, wxCallbacks);
+    Api.generalShare(wxData,wxCallbacks);
+});
+
+
+});
+</script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253551319'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1253551319' type='text/javascript'%3E%3C/script%3E"));</script><span id="cnzz_stat_icon_1253551319"><a href="http://www.cnzz.com/stat/website.php?web_id=1253551319" target="_blank" title="站长统计">站长统计</a></span><script src="./我是歌手，猜歌名！_files/z_stat.php" type="text/javascript"></script><script src="./我是歌手，猜歌名！_files/core.php" charset="utf-8" type="text/javascript"></script>	
+
+
+</body></html>
